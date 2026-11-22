@@ -1,0 +1,370 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f8f9fd;
+    color: #20243a;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: #ffffff;
+    border-bottom: 1px solid #edf0f7;
+}
+
+.navbar h2 {
+    font-size: 28px;
+    font-weight: 800;
+    color: #20243a;
+}
+
+.navbar h2 span {
+    background: linear-gradient(135deg, #4776e6, #8e54e9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #60677d;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #6c63e8;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 95px 20px;
+    background: linear-gradient(135deg, #f0f4ff, #f8f3ff);
+}
+
+.hero h1 {
+    font-size: 46px;
+    font-weight: 800;
+    color: #20243a;
+    margin-bottom: 18px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #727991;
+    margin-bottom: 30px;
+}
+
+.hero input {
+    width: 90%;
+    max-width: 570px;
+    padding: 18px 22px;
+    border: 1px solid #e0e4f0;
+    border-radius: 14px;
+    font-size: 16px;
+    outline: none;
+    background: white;
+    box-shadow: 0 8px 25px rgba(45, 55, 100, 0.07);
+}
+
+.hero input:focus {
+    border-color: #8174e9;
+}
+
+/* MAIN */
+main {
+    max-width: 1150px;
+    margin: 65px auto;
+    padding: 0 22px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 34px;
+    font-weight: 800;
+    color: #20243a;
+    margin-bottom: 42px;
+}
+
+/* TOOL CARDS */
+.tools-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+}
+
+.tool-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid #eceef6;
+    box-shadow: 0 8px 30px rgba(36, 43, 80, 0.045);
+    transition: 0.3s ease;
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(80, 76, 150, 0.11);
+    border-color: #dcd9ff;
+}
+
+/* ICONS */
+.tool-heading {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.tool-heading h2 {
+    color: #242840;
+    font-size: 22px;
+    margin: 0;
+}
+
+.tool-icon {
+    width: 58px;
+    height: 58px;
+    min-width: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #e9efff, #f0e8ff);
+    color: #6657df;
+    border-radius: 17px;
+    transition: 0.3s;
+}
+
+.tool-icon svg {
+    width: 29px;
+    height: 29px;
+}
+
+.tool-card:hover .tool-icon {
+    background: linear-gradient(135deg, #4776e6, #8e54e9);
+    color: white;
+    transform: scale(1.06);
+}
+
+.tool-card > p {
+    color: #7b8196;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* INPUTS */
+textarea {
+    width: 100%;
+    min-height: 150px;
+    padding: 15px;
+    border: 1px solid #e1e5ef;
+    border-radius: 12px;
+    font-size: 15px;
+    resize: vertical;
+    outline: none;
+    background: #fcfcff;
+}
+
+.tool-card input,
+.tool-card select {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    margin: 15px 0;
+    border: 1px solid #e1e5ef;
+    border-radius: 11px;
+    font-size: 15px;
+    background: #fcfcff;
+    color: #30354b;
+    outline: none;
+}
+
+textarea:focus,
+.tool-card input:focus,
+.tool-card select:focus {
+    border-color: #8879ec;
+    box-shadow: 0 0 0 3px rgba(136, 121, 236, 0.12);
+}
+
+.tool-card input[type="checkbox"] {
+    display: inline-block;
+    width: auto;
+    margin: 8px;
+}
+
+/* BUTTONS */
+button {
+    background: linear-gradient(135deg, #4776e6, #8058e8);
+    color: white;
+    padding: 14px 22px;
+    border: none;
+    border-radius: 11px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 700;
+    transition: 0.3s;
+    box-shadow: 0 5px 13px rgba(91, 93, 210, 0.17);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #3866d5, #7048d5);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(91, 93, 210, 0.25);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* RESULTS */
+.results {
+    display: flex;
+    gap: 25px;
+    margin-top: 18px;
+    font-weight: bold;
+    color: #535d79;
+}
+
+#ageResult,
+#bmiResult,
+#percentageResult,
+#discountResult,
+#unitResult,
+#qrMessage,
+#passwordMessage {
+    display: block;
+    margin-top: 18px;
+    font-weight: 600;
+    color: #6255d9;
+    line-height: 1.6;
+}
+
+#qrResult img {
+    max-width: 100%;
+    height: auto;
+    border: 8px solid white;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.09);
+}
+
+/* ABOUT */
+.about {
+    text-align: center;
+    padding: 70px 20px;
+    background: linear-gradient(135deg, #f0f4ff, #f8f3ff);
+}
+
+.about h2 {
+    margin-bottom: 15px;
+    color: #252943;
+    font-size: 30px;
+}
+
+.about p {
+    max-width: 750px;
+    margin: auto;
+    color: #727991;
+    line-height: 1.8;
+}
+
+/* FOOTER */
+footer {
+    background: #20243a;
+    color: white;
+    text-align: center;
+    padding: 28px;
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+    .navbar {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .nav-links {
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        padding: 65px 18px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .tools-container {
+        grid-template-columns: 1fr;
+    }
+
+    .tool-card {
+        padding: 23px;
+    }
+
+    .results {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* TOOLIFYFREE LOGO */
+.site-logo {
+    width: 210px;
+    height: 75px;
+    object-fit: contain;
+    display: block;
+}
+
+.navbar > a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+/* CONTACT PAGE */
+
+.contact-card {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.contact-card h2 {
+    color: #252943;
+    margin-bottom: 12px;
+}
+
+.contact-card label {
+    display: block;
+    margin-top: 18px;
+    color: #30354b;
+    font-weight: 600;
+}
+
+.contact-card textarea {
+    min-height: 160px;
+}
+
+.contact-card button {
+    margin-top: 15px;
+}
+
+.contact-card button:hover {
+    transform: translateY(-2px);
+}

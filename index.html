@@ -1,0 +1,256 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToolifyFree - Free Online Tools</title>
+    <meta name="description" content="Use free online tools including word counter, age calculator, password generator, QR code generator and more.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <a href="#home">
+            <img src="logo.png" alt="ToolifyFree Logo" class="site-logo">
+        </a>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#tools">Tools</a>
+            <a href="#about">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero" id="home">
+        <h1>Free Online Tools For Everyone</h1>
+        <p>Simple, fast and useful tools to make your daily work easier.</p>
+        <input type="text" id="searchInput" placeholder="Search your favourite tool...">
+    </header>
+
+    <!-- TOOLS SECTION -->
+    <main id="tools">
+        <h2 class="section-title">Explore Our Free Tools</h2>
+
+        <div class="tools-container">
+
+            <!-- WORD COUNTER -->
+            <section class="tool-card">
+                <div class="tool-heading">
+                    <div class="tool-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <path d="M4 6h16M4 12h16M4 18h10"/>
+                        </svg>
+                    </div>
+                    <h2>Word Counter</h2>
+                </div>
+                <p>Count words and characters in your text instantly.</p>
+                <textarea id="textInput" placeholder="Start typing your text here..."></textarea>
+                <div class="results">
+                    <span>Words: <span id="wordCount">0</span></span>
+                    <span>Characters: <span id="charCount">0</span></span>
+                </div>
+            </section>
+
+            <!-- AGE CALCULATOR -->
+            <section class="tool-card">
+                <div class="tool-heading">
+                    <div class="tool-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <rect x="3" y="5" width="18" height="16" rx="2"/>
+                            <path d="M16 3v4M8 3v4M3 10h18"/>
+                        </svg>
+                    </div>
+                    <h2>Age Calculator</h2>
+                </div>
+                <p>Calculate your exact age in years, months and days.</p>
+                <input type="date" id="birthDate">
+                <button id="calculateBtn">Calculate Age</button>
+                <p id="ageResult"></p>
+            </section>
+
+            <!-- TEXT CASE CONVERTER -->
+            <section class="tool-card">
+                <div class="tool-heading">
+                    <div class="tool-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <path d="M4 19L10 5l6 14M6 15h8M16 11h5M18.5 11v8"/>
+                        </svg>
+                    </div>
+                    <h2>Text Case Converter</h2>
+                </div>
+                <p>Convert your text into uppercase or lowercase.</p>
+                <textarea id="caseInput" placeholder="Enter your text..."></textarea>
+                <button id="upperBtn">UPPERCASE</button>
+                <button id="lowerBtn">lowercase</button>
+                <textarea id="caseOutput" placeholder="Converted text will appear here..." readonly></textarea>
+            </section>
+
+            <!-- PASSWORD GENERATOR -->
+            <section class="tool-card">
+                <div class="tool-heading">
+                    <div class="tool-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <rect x="4" y="10" width="16" height="11" rx="2"/>
+                            <path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v3"/>
+                        </svg>
+                    </div>
+                    <h2>Password Generator</h2>
+                </div>
+                <p>Create a strong random password for your accounts.</p>
+
+                <label for="passwordLength">Password Length (4–64)</label>
+                <input type="number" id="passwordLength" min="4" max="64" value="12">
+
+                <label><input type="checkbox" id="includeUpper" checked> Uppercase Letters</label>
+                <label><input type="checkbox" id="includeLower" checked> Lowercase Letters</label>
+                <label><input type="checkbox" id="includeNumbers" checked> Numbers</label>
+                <label><input type="checkbox" id="includeSymbols" checked> Symbols</label>
+
+                <button id="generatePasswordBtn">Generate Password</button>
+                <input type="text" id="generatedPassword" placeholder="Your password will appear here..." readonly>
+                <button id="copyPasswordBtn">Copy Password</button>
+                <p id="passwordMessage"></p>
+            </section>
+
+            <!-- BMI CALCULATOR -->
+            <section class="tool-card">
+                <div class="tool-heading">
+                    <div class="tool-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <path d="M4 20V8l8-5 8 5v12"/>
+                            <path d="M8 20v-5h8v5"/>
+                        </svg>
+                    </div>
+                    <h2>BMI Calculator</h2>
+                </div>
+                <p>Calculate your Body Mass Index using weight and height.</p>
+                <input type="number" id="bmiWeight" placeholder="Weight in kg">
+                <input type="number" id="bmiHeight" placeholder="Height in cm">
+                <button id="calculateBMI">Calculate BMI</button>
+                <p id="bmiResult"></p>
+            </section>
+
+            <!-- PERCENTAGE CALCULATOR -->
+            <section class="tool-card">
+                <div class="tool-heading">
+                    <div class="tool-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <circle cx="7" cy="7" r="3"/>
+                            <circle cx="17" cy="17" r="3"/>
+                            <path d="M19 5L5 19"/>
+                        </svg>
+                    </div>
+                    <h2>Percentage Calculator</h2>
+                </div>
+                <p>Find percentages of any number quickly.</p>
+                <input type="number" id="percentageValue" placeholder="Enter percentage">
+                <input type="number" id="percentageNumber" placeholder="Enter number">
+                <button id="calculatePercentage">Calculate Percentage</button>
+                <p id="percentageResult"></p>
+            </section>
+
+            <!-- DISCOUNT CALCULATOR -->
+            <section class="tool-card">
+                <div class="tool-heading">
+                    <div class="tool-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <path d="M20 13l-7 7L3 10V3h7l10 10z"/>
+                            <circle cx="7.5" cy="7.5" r="1"/>
+                        </svg>
+                    </div>
+                    <h2>Discount Calculator</h2>
+                </div>
+                <p>Calculate your savings and final price after discount.</p>
+                <input type="number" id="originalPrice" placeholder="Original price (Rs.)">
+                <input type="number" id="discountPercent" placeholder="Discount percentage">
+                <button id="calculateDiscount">Calculate Discount</button>
+                <p id="discountResult"></p>
+            </section>
+
+            <!-- UNIT CONVERTER -->
+            <section class="tool-card">
+                <div class="tool-heading">
+                    <div class="tool-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <path d="M4 7h16M4 17h16M7 4l-3 3 3 3M17 14l3 3-3 3"/>
+                        </svg>
+                    </div>
+                    <h2>Unit Converter</h2>
+                </div>
+                <p>Convert length, weight and temperature units easily.</p>
+
+                <select id="unitType">
+                    <option value="km-m">Kilometers to Meters</option>
+                    <option value="m-km">Meters to Kilometers</option>
+                    <option value="kg-g">Kilograms to Grams</option>
+                    <option value="g-kg">Grams to Kilograms</option>
+                    <option value="c-f">Celsius to Fahrenheit</option>
+                    <option value="f-c">Fahrenheit to Celsius</option>
+                    <option value="m-ft">Meters to Feet</option>
+                    <option value="ft-m">Feet to Meters</option>
+                </select>
+
+                <input type="number" id="unitValue" placeholder="Enter value">
+                <button id="convertUnit">Convert</button>
+                <p id="unitResult"></p>
+            </section>
+
+            <!-- QR CODE GENERATOR -->
+            <section class="tool-card">
+                <div class="tool-heading">
+                    <div class="tool-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <rect x="3" y="3" width="7" height="7" rx="1"/>
+                            <rect x="14" y="3" width="7" height="7" rx="1"/>
+                            <rect x="3" y="14" width="7" height="7" rx="1"/>
+                            <path d="M14 14h3v3h-3zM20 14v3M14 20h3"/>
+                        </svg>
+                    </div>
+                    <h2>QR Code Generator</h2>
+                </div>
+                <p>Create a QR code for a website link or text.</p>
+                <input type="text" id="qrInput" placeholder="Enter website link or text">
+                <button id="generateQR">Generate QR Code</button>
+                <div id="qrResult" style="margin-top:20px; text-align:center;"></div>
+                <button id="downloadQR" style="display:none; margin-top:15px;">
+                    Download QR Code
+                </button>
+                <p id="qrMessage"></p>
+            </section>
+
+        </div>
+
+        <p id="noResults" style="display:none; text-align:center; margin:25px;">
+            No tools found. Try another search.
+        </p>
+    </main>
+
+    <!-- ABOUT SECTION -->
+    <section class="about" id="about">
+        <h2>About ToolifyFree</h2>
+        <p>
+            ToolifyFree provides simple and useful free online tools
+            to help people complete everyday tasks quickly and easily.
+            Our goal is to make useful tools accessible to everyone.
+        </p>
+        <a href="about.html">Learn More About Us</a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 ToolifyFree. All Rights Reserved.</p>
+        <div class="footer-links">
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms &amp; Conditions</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
